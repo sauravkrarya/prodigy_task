@@ -1,0 +1,246 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header Styles */
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.theme-toggle .toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #001f3f; /* Navy blue background for night mode */
+    border-radius: 30px;
+    position: relative;
+    width: 60px;
+    height: 34px;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle .toggle-label .slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.theme-toggle input[type="checkbox"]:checked + .toggle-label {
+    background-color: #4CAF50; /* Green background for light mode */
+}
+
+.theme-toggle input[type="checkbox"]:checked + .toggle-label .slider {
+    transform: translateX(26px);
+}
+
+.theme-toggle .toggle-label .sun {
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    font-size: 18px;
+    color: #FFEB3B;
+}
+
+.theme-toggle .toggle-label .moon {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Main Styles */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stopwatch-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.stopwatch {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.stopwatch:hover {
+    transform: scale(1.02);
+}
+
+#display {
+    font-size: 48px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Increased space between buttons */
+    margin-top: 10px;
+}
+
+.controls button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+.controls button img {
+    width: 10px;
+    height: 10px;
+}
+
+#start {
+    background: #4CAF50;
+}
+
+#pause {
+    background: #FFC107;
+}
+
+#reset {
+    background: #f44336;
+}
+
+#lap {
+    background: #2196F3;
+}
+
+.laps {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.laps div {
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode #display {
+    background: #444;
+}
+
+.dark-mode .controls button {
+    color: #fff;
+}
+
+.dark-mode #start {
+    background: #388E3C;
+}
+
+.dark-mode #pause {
+    background: #F57F17;
+}
+
+.dark-mode #reset {
+    background: #C62828;
+}
+
+.dark-mode #lap {
+    background: #1976D2;
+}
+
+.dark-mode .laps div {
+    background: #333;
+    border: 1px solid #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+}

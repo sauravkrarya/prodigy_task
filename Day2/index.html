@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Stopwatch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="clock.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Stopwatch</div>
+            <nav>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" />
+                    <label for="theme-switch" class="toggle-label">
+                        <span class="sun">🌞</span>
+                        <span class="moon">🌙</span>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </nav>
+        </div>
+    </header>  
+    <main>
+        <div class="stopwatch-container">
+            <div class="stopwatch">
+                <div id="display">00:00:00</div>
+                <div class="controls">
+                    <button id="start"><img src="video.png" alt="Start"> Start</button>
+                    <button id="pause"><img src="pause.png" alt="Pause"> Pause</button>
+                    <button id="reset"><img src="refresh.png" alt="Reset"> Reset</button>
+                    <button id="lap"><img src="game.png" alt="Lap"> Lap</button>
+                </div>
+            </div>
+            <div id="laps" class="laps"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Stylish Stopwatch. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
