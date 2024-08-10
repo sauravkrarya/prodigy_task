@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Tic-Tac-Toe</div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="game-container">
+            
+            <div class="game-mode">
+                <button id="player-vs-player" class="mode-button">Player vs Player</button>
+                <button id="player-vs-ai" class="mode-button">Player vs AI</button>
+            </div>
+            
+            <div id="board" class="board"></div>
+            
+            <div class="status-message" id="status">Player X's Turn</div>
+            
+            <button class="restart-button" id="restart"><i class="fas fa-redo"></i> Restart Game</button>
+            
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Tic-Tac-Toe Game</p>
+    </footer>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

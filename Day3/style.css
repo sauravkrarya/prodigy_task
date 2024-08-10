@@ -1,0 +1,199 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3b0a45, #5d2a91);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Game Container */
+.game-container {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease;
+    position: relative;
+}
+
+/* Game Mode Buttons */
+.mode-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff6f61 0%, #d45d79 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.mode-button:hover {
+    background: linear-gradient(135deg, #d45d79 0%, #ff6f61 100%);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+/* Cells */
+.cell {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(145deg, #ffffff, #e0e0e0);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.cell:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+    background-color: #d0d0d0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    animation: pulse 1s infinite;
+}
+
+.cell:hover:before {
+    opacity: 1;
+}
+
+.cell.x {
+    color: #ff6f61;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.cell.o {
+    color: #d45d79;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+/* Status Message */
+.status-message {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease;
+}
+
+/* Restart Button */
+.restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 670px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff6f61 0%, #d45d79 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restart-button i {
+    margin-right: 8px;
+}
+
+.restart-button:hover {
+    background: linear-gradient(135deg, #d45d79 0%, #ff6f61 100%);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+}
